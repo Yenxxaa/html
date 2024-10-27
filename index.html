@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDE 頁面 - 分割布局</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex; /* 使用 flex 來佈局 */
+        }
+
+        .left-panel {
+            width: 400px; /* 左側欄固定寬度 */
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box; /* 確保 padding 不影響總寬度 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right-panel {
+            flex: 1; /* 右側佔滿剩餘空間 */
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .left-panel h2, .right-panel h2 {
+            margin-top: 0;
+        }
+
+        .left-panel ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .left-panel li {
+            padding: 10px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        .left-panel li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .left-panel li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="left-panel">
+        <h2>導航欄</h2>
+    </div>
+    <div class="right-panel">
+        <h2>主要內容區域</h2>
+        <p>這裡是系統回覆的訊息。</p>
+    </div>
+</body>
+</html>
